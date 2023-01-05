@@ -1,0 +1,2 @@
+# ginblog
+first gin project
