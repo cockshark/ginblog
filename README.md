@@ -19,6 +19,9 @@ gin-blog/
 │   └── util
 │       └── pagination.go
 ├── routers
+│   ├── api
+│   │   └── v1
+│   │       └── tag.go
 │   └── router.go
 ├── runtime
 ```
