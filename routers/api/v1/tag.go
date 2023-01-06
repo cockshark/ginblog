@@ -152,7 +152,7 @@ func DeleteTag(c *gin.Context) {
 		if models.ExistTagByID(id) {
 			models.DeleteTag(id)
 		} else {
-			code = e.ERROR_NOT_EXIST_ARTICLE
+			code = e.ERROR_NOT_EXIST_TAG
 		}
 	} else {
 		for _, err := range valid.Errors {
