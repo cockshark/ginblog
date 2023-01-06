@@ -9,7 +9,9 @@ gin-blog/
 ├── main.go
 ├── middleware
 ├── models
-│   └── models.go
+│   ├── article.go
+│   ├── models.go
+│   └── tag.go
 ├── pkg
 │   ├── e
 │   │   ├── code.go
@@ -21,6 +23,7 @@ gin-blog/
 ├── routers
 │   ├── api
 │   │   └── v1
+│   │       ├── article.go
 │   │       └── tag.go
 │   └── router.go
 ├── runtime
