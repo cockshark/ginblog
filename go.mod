@@ -4,9 +4,9 @@ go 1.19
 
 require (
 	github.com/astaxie/beego v1.12.3
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-gonic/gin v1.8.2
 	github.com/go-ini/ini v1.67.0
+	github.com/golang-jwt/jwt/v4 v4.4.3
 	github.com/jinzhu/gorm v1.9.16
 	github.com/unknwon/com v1.0.1
 )
