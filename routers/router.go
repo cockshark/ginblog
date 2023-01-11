@@ -5,10 +5,9 @@ import (
 	"ginblog/pkg/setting"
 	"ginblog/routers/api"
 	v1 "ginblog/routers/api/v1"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	"net/http"
 )
 
 func InitRouter() *gin.Engine {
@@ -21,6 +20,11 @@ func InitRouter() *gin.Engine {
 	gin.SetMode(setting.RunMode)
 
 	r.GET("/auth", api.GetAuth)
+	r.GET("/test", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "test",
+		})
+	})
 
 	apiv1 := r.Group("/api/v1")
 
@@ -47,12 +51,6 @@ func InitRouter() *gin.Engine {
 		//删除指定文章
 		apiv1.DELETE("/articles/:id", v1.DeleteArticle)
 	}
-
-	r.GET("/test", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "test",
-		})
-	})
 
 	return r
 
