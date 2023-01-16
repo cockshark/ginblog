@@ -130,5 +130,5 @@ func TestTagOption(t *testing.T) {
 	addTagRespCode := int(addResponseData["code"].(float64))
 
 	assert.Equal(t, http.StatusOK, addTagRespCode, "%s response status is : %s", uri, addTagRespCode)
-	
+
 }

@@ -2,10 +2,11 @@ package v1
 
 import (
 	"fmt"
-	"log"
+
 	"net/http"
 
 	"ginblog/models"
+	log "ginblog/pkg/logging"
 
 	"ginblog/pkg/e"
 	"ginblog/pkg/setting"
@@ -72,7 +73,7 @@ func AddTag(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Println(err.Key, err.Message)
+			log.Info(err.Key, err.Message)
 		}
 	}
 
@@ -127,7 +128,7 @@ func EditTag(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Println(err.Key, err.Message)
+			log.Info(err.Key, err.Message)
 		}
 	}
 
@@ -156,7 +157,7 @@ func DeleteTag(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Println(err.Key, err.Message)
+			log.Info(err.Key, err.Message)
 		}
 	}
 
