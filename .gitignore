@@ -17,3 +17,4 @@ conf/app.ini
 .idea/
 /.idea
 .idea/*
+runtime/logs
